@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{709058BB-E2DF-4F92-93F9-ED493DCE4062}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DB_project1</RootNamespace>
+    <AssemblyName>DB_project1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bus_icon-icons.com_76529.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer Service\Addpromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\Addpromo.designer.cs">
+      <DependentUpon>Addpromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Service\ApplyPenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\ApplyPenalty.designer.cs">
+      <DependentUpon>ApplyPenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer Service\CompaintsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\CompaintsForm.designer.cs">
+      <DependentUpon>CompaintsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="Customer Service\CS_Main_Functions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\CS_Main_Functions.designer.cs">
+      <DependentUpon>CS_Main_Functions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="Receptionist\FindTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist\FindTrip.designer.cs">
+      <DependentUpon>FindTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist\Inquiries_about_trips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist\Inquiries_about_trips.Designer.cs">
+      <DependentUpon>Inquiries_about_trips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist\Insert_Passenger_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist\Insert_Passenger_information.designer.cs">
+      <DependentUpon>Insert_Passenger_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist\Weekly_Trip_List_For_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receptionist\Weekly_Trip_List_For_Search.Designer.cs">
+      <DependentUpon>Weekly_Trip_List_For_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\LoginFormForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\LoginFormForAdmin.designer.cs">
+      <DependentUpon>LoginFormForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\AD\Insert_Ad_Contact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\AD\Insert_Ad_Contact.designer.cs">
+      <DependentUpon>Insert_Ad_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\AD\Search_Ad_contract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\AD\Search_Ad_contract.Designer.cs">
+      <DependentUpon>Search_Ad_contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Contract Administrator Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Contract Administrator Form.Designer.cs">
+      <DependentUpon>Contract Administrator Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\Delete_packages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\Delete_packages.Designer.cs">
+      <DependentUpon>Delete_packages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\Insert__Package.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\Insert__Package.Designer.cs">
+      <DependentUpon>Insert__Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\SearchPakages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Package\SearchPakages.Designer.cs">
+      <DependentUpon>SearchPakages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Bus_Rent_Search_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Bus_Rent_Search_Form.Designer.cs">
+      <DependentUpon>Bus_Rent_Search_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Insert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Insert.Designer.cs">
+      <DependentUpon>Rent_Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Search.Designer.cs">
+      <DependentUpon>Rent_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Search_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract Admistrator\Rent\Rent_Search_Item.Designer.cs">
+      <DependentUpon>Rent_Search_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract Admistrator\ThemeColor.cs" />
+    <Compile Include="IT Administrator\Buses\Bus_Delete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Buses\Bus_Delete.Designer.cs">
+      <DependentUpon>Bus_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Buses\Bus_Insert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Buses\Bus_Insert.Designer.cs">
+      <DependentUpon>Bus_Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Buses\Bus_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Buses\Bus_Update.Designer.cs">
+      <DependentUpon>Bus_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Delete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Delete.Designer.cs">
+      <DependentUpon>Driver_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Insert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Insert.Designer.cs">
+      <DependentUpon>Driver_Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Driver\Driver_Update.Designer.cs">
+      <DependentUpon>Driver_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Delete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Delete.Designer.cs">
+      <DependentUpon>Employee_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Insert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Insert.Designer.cs">
+      <DependentUpon>Employee_Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Employee\Employee_Update.Designer.cs">
+      <DependentUpon>Employee_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\IT Administrator Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\IT Administrator Form.Designer.cs">
+      <DependentUpon>IT Administrator Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Message Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Message Form.Designer.cs">
+      <DependentUpon>Message Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTripListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTripListItem.Designer.cs">
+      <DependentUpon>WeeklyTripListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_Insert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_Insert.Designer.cs">
+      <DependentUpon>WeeklyTrips_Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_Update.Designer.cs">
+      <DependentUpon>WeeklyTrips_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrips_UpdateForm.Designer.cs">
+      <DependentUpon>WeeklyTrips_UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrip_Delete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrip_Delete.Designer.cs">
+      <DependentUpon>WeeklyTrip_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrip_DeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Administrator\Weekly Trips\WeeklyTrip_DeleteForm.Designer.cs">
+      <DependentUpon>WeeklyTrip_DeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation Class.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Customer Service\RemovePromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service\RemovePromo.designer.cs">
+      <DependentUpon>RemovePromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome\Welcome.designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customer Service\Addpromo.resx">
+      <DependentUpon>Addpromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Service\ApplyPenalty.resx">
+      <DependentUpon>ApplyPenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Service\CompaintsForm.resx">
+      <DependentUpon>CompaintsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Service\CS_Main_Functions.resx">
+      <DependentUpon>CS_Main_Functions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist\FindTrip.resx">
+      <DependentUpon>FindTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist\Inquiries_about_trips.resx">
+      <DependentUpon>Inquiries_about_trips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist\Insert_Passenger_information.resx">
+      <DependentUpon>Insert_Passenger_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist\Weekly_Trip_List_For_Search.resx">
+      <DependentUpon>Weekly_Trip_List_For_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\LoginFormForAdmin.resx">
+      <DependentUpon>LoginFormForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\AD\Insert_Ad_Contact.resx">
+      <DependentUpon>Insert_Ad_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\AD\Search_Ad_contract.resx">
+      <DependentUpon>Search_Ad_contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Contract Administrator Form.resx">
+      <DependentUpon>Contract Administrator Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Package\Delete_packages.resx">
+      <DependentUpon>Delete_packages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Package\Insert__Package.resx">
+      <DependentUpon>Insert__Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Package\SearchPakages.resx">
+      <DependentUpon>SearchPakages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Rent\Bus_Rent_Search_Form.resx">
+      <DependentUpon>Bus_Rent_Search_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Rent\Rent_Insert.resx">
+      <DependentUpon>Rent_Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Rent\Rent_Search.resx">
+      <DependentUpon>Rent_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract Admistrator\Rent\Rent_Search_Item.resx">
+      <DependentUpon>Rent_Search_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Buses\Bus_Delete.resx">
+      <DependentUpon>Bus_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Buses\Bus_Insert.resx">
+      <DependentUpon>Bus_Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Buses\Bus_Update.resx">
+      <DependentUpon>Bus_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Driver\Driver_Delete.resx">
+      <DependentUpon>Driver_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Driver\Driver_Insert.resx">
+      <DependentUpon>Driver_Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Driver\Driver_Update.resx">
+      <DependentUpon>Driver_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Employee\Employee_Delete.resx">
+      <DependentUpon>Employee_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Employee\Employee_Insert.resx">
+      <DependentUpon>Employee_Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Employee\Employee_Update.resx">
+      <DependentUpon>Employee_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\IT Administrator Form.resx">
+      <DependentUpon>IT Administrator Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Message Form.resx">
+      <DependentUpon>Message Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTripListItem.resx">
+      <DependentUpon>WeeklyTripListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTrips_Insert.resx">
+      <DependentUpon>WeeklyTrips_Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTrips_Update.resx">
+      <DependentUpon>WeeklyTrips_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTrips_UpdateForm.resx">
+      <DependentUpon>WeeklyTrips_UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTrip_Delete.resx">
+      <DependentUpon>WeeklyTrip_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Administrator\Weekly Trips\WeeklyTrip_DeleteForm.resx">
+      <DependentUpon>WeeklyTrip_DeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Customer Service\RemovePromo.resx">
+      <DependentUpon>RemovePromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bus_icon-icons.com_76529.ico" />
+    <Content Include="Resources\admin.png" />
+    <Content Include="Resources\admin1.png" />
+    <Content Include="Resources\back.png" />
+    <Content Include="Resources\background.jpg" />
+    <Content Include="Resources\collrs7-696x404.jpg" />
+    <Content Include="Resources\contract.png" />
+    <Content Include="Resources\costomer.png" />
+    <Content Include="Resources\date.png" />
+    <Content Include="Resources\day.png" />
+    <Content Include="Resources\DB_image.jpg" />
+    <Content Include="Resources\DB_image1.jpg" />
+    <Content Include="Resources\DB_image2.jpg" />
+    <Content Include="Resources\dddd.jpg" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\email.png" />
+    <Content Include="Resources\ezq248hwr1.jpg" />
+    <Content Include="Resources\face.png" />
+    <Content Include="Resources\findtrip.jpg" />
+    <Content Include="Resources\findtrip1.jpg" />
+    <Content Include="Resources\gender.png" />
+    <Content Include="Resources\home.png" />
+    <Content Include="Resources\hooome.png" />
+    <Content Include="Resources\hours.png" />
+    <Content Include="Resources\icons8_add_100px.png" />
+    <Content Include="Resources\icons8_add_64px_1.png" />
+    <Content Include="Resources\icons8_add_new_40px_2.png" />
+    <Content Include="Resources\icons8_back_arrow_30px.png" />
+    <Content Include="Resources\icons8_complaint_48px.png" />
+    <Content Include="Resources\icons8_decline_48px_1.png" />
+    <Content Include="Resources\icons8_delete_bin_48px.png" />
+    <Content Include="Resources\icons8_home_50px_1.png" />
+    <Content Include="Resources\icons8_home_64px_1.png" />
+    <Content Include="Resources\images.jpg" />
+    <Content Include="Resources\insta.png" />
+    <Content Include="Resources\learning_96829325d7aba070889fa302f9a89759.jpg" />
+    <Content Include="Resources\loc.png" />
+    <Content Include="Resources\Location-2-icon.png" />
+    <Content Include="Resources\location.jpg" />
+    <Content Include="Resources\location.png" />
+    <Content Include="Resources\loggg.png" />
+    <Content Include="Resources\login.png" />
+    <None Include="Resources\logsuc.png" />
+    <Content Include="Resources\Maps-Location-icon.png" />
+    <Content Include="Resources\name.png" />
+    <Content Include="Resources\optimize-call-center-customer-support-for-incresed-revenue.png" />
+    <Content Include="Resources\pasee.png" />
+    <Content Include="Resources\passenger.png" />
+    <Content Include="Resources\password.png" />
+    <Content Include="Resources\people-structure-icon.png" />
+    <Content Include="Resources\pho.png" />
+    <Content Include="Resources\phone.png" />
+    <Content Include="Resources\recep.png" />
+    <Content Include="Resources\reserve.jpg" />
+    <None Include="Resources\reserve1.jpg" />
+    <Content Include="Resources\Resolve-Customer-Support-Problems-Feature.png" />
+    <None Include="Resources\searchicon.png" />
+    <Content Include="Resources\seat.png" />
+    <Content Include="Resources\Service-Help-Desk.png" />
+    <Content Include="Resources\size2.jpg" />
+    <Content Include="Resources\size3.jpg" />
+    <Content Include="Resources\Time-And-Date-Calendar-icon.png" />
+    <Content Include="Resources\Travel-Beach-icon.png" />
+    <Content Include="Resources\twiiter.png" />
+    <Content Include="Resources\twitter.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\welcome.png" />
+    <Content Include="Resources\WhatsApp Image 2020-12-18 at 12.42.41 AM.jpeg" />
+    <Content Include="Resources\WhatsApp Image 2020-12-18 at 12.55.29 AM.jpeg" />
+    <None Include="Resources\WhatsApp Image 2020-12-30 at 1.55.35 PM.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
